@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1760632451 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\main.cpp
+	<iostream>
+	<Fecha.h>
+	<Cliente.h>
+
+1760635476 c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\include\fecha.h
+	<iostream>
+
+1760635272 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\src\cliente.cpp
+	"Cliente.h"
+
+1760635291 c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\include\cliente.h
+	<iostream>
+	<cstring>
+	<Fecha.h>
+
+1760634258 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\src\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1761065919 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\parte1.cpp
+	<iostream>
+	<Fecha.h>
+	<Cliente.h>
+
+1761070361 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\src\contratotp.cpp
+	"ContratoTP.h"
+
+1761070333 c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\include\contratotp.h
+	<Contrato.h>
+
+1761070239 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\src\contratomovil.cpp
+	"ContratoMovil.h"
+
+1761070230 c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\include\contratomovil.h
+	<Contrato.h>
+	<Fecha.h>
+
+1761068472 c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\include\contrato.h
+	<iostream>
+	<Fecha.h>
+
+1761070095 source:c:\users\anton\onedrive - universidad de huelva\ingenierÍa informÁtica\2º año\1er cuatrimestre\mp\practicas\practica_1 25-26\26\practica 1 25\src\contrato.cpp
+	"Contrato.h"
+	<iostream>
+
