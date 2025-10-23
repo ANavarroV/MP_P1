@@ -12,13 +12,9 @@ ContratoMovil::~ContratoMovil(){
     delete [] nacionalidad;
 }
 
-ContratoMovil::ContratoMovil(const ContratoMovil &otro) : Contrato(otro){
+ContratoMovil::ContratoMovil(const ContratoMovil &otro) : Contrato(dni, f){
 
-    nacionalidad = new char[strlen(otro.nacionalidad)+1];
-    strcpy(nacionalidad, otro.nacionalidad);
 
-    precioMin = otro.precioMin;
-    minHablados = otro.minHablados;
 
 }
 
@@ -56,14 +52,6 @@ float ContratoMovil::factura(){
     float factura = precioMin * minHablados;
 
     return factura;
-}
-
-void ContratoMovil::ver(){
-
-    cout << getDniContrato() << " (" << getIdContrato() << " - " << getFechaContrato() << ") ";
-    cout << getMinutosHablados() << "m, " << getNacionalidad() << " " << getPrecioMinuto() << " - ";
-    cout << factura() << "€";
-
 }
 
 ostream& operator<<(ostream &out, ContratoMovil &cM){

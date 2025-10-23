@@ -14,20 +14,40 @@ Contrato::~Contrato(){
     //dtor
 }
 
-long int Contrato::getDni() const{
+Contrato::Contrato(const Contrato &o): idContrato(contador++),fechaContrato(o.fechaContrato){
+    dniContrato = o.dniContrato;
+}
+
+long int Contrato::getDniContrato() const{
     return dniContrato;
 }
 
-int Contrato::getId() const{
+int Contrato::getIdContrato() const{
     return idContrato;
 }
 
-void Contrato::setDni(long int dni){
+Fecha Contrato::getFechaContrato() const{
+    return fechaContrato;
+}
+
+void Contrato::setDniContrato(long int dni){
     dniContrato = dni;
 }
 
-void Contrato::ver(){
-    cout << getDni() << " (" << getId() << " - ";
-    fechaContrato.ver();
-    cout << ")" << endl;
+void Contrato::setFechaContrato(Fecha f){
+    fechaContrato = f;
 }
+
+void Contrato::ver(){
+    cout << getDniContrato() << " (" << getIdContrato() << " - ";
+    fechaContrato.ver();
+    cout << ")";
+}
+
+ostream& operator<<(ostream &out, const Contrato &c){
+
+    out << c.getDniContrato() << " (" << c.getIdContrato() << " - " << c.getFechaContrato() << ")";
+
+    return out;
+}
+

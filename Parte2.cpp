@@ -19,14 +19,18 @@ int main(int argc, char *argv[]) {
     cout << ContratoTP::getLimiteMinutos() << " - " << ContratoTP::getPrecio() << endl;
 
     ContratoTP ct1(17333256, f1, 250); //habla 250 minutos
-    ContratoTP ct2(12555100, f3, 320); //habla 320 minutos ContratoTP ct3(ct1);
+    ContratoTP ct2(12555100, f3, 320); //habla 320 minutos
+    ContratoTP ct3(ct1);
     ContratoMovil cm1(17333256, f1, 0.12, 100, "ESPAÑOL"); //habla 100 minutos
     ContratoMovil cm2(17000000, Fecha(3,3,2003), 0.10, 180, "FRANCES"); //habla 180 minutos
-    ContratoMovil cm3(cm2); p->ver(); cout << "\n"; c.ver(); cout << endl; ct1.ver(); cout << endl; ct2.ver(); cout << "\n"; ct3.ver(); cout << "\n"; cm1.ver(); cout << endl; cm2.ver(); cout << "\n"; cm3.ver(); cout << "\n";
+    ContratoMovil cm3(cm2); p->ver(); cout << "\n"; c.ver(); cout << endl; ct1.ver(); cout << endl;
+    ct2.ver(); cout << "\n"; ct3.ver(); cout << "\n"; cm1.ver(); cout << endl; cm2.ver(); cout << "\n"; cm3.ver(); cout << "\n";
 
+    cout << endl;
     cout << p->getIdContrato() << ct2.getIdContrato() << cm2.getIdContrato() << endl;
     cout << setprecision(2) << fixed; //a partir de aqui float se muestra con 2 decimales
     cout << "Facturas: " << ct1.factura() <<"-"<< ct2.factura() <<"-"<< cm1.factura() << endl;
+    cout << endl;
 
     ContratoTP::setTarifaPlana(350, 12); //350 minutos por 12 euros
     p->setDniContrato(cm1.getDniContrato());
