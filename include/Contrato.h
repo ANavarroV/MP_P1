@@ -16,20 +16,14 @@ class Contrato{
     public:
         Contrato(const long int dni, const Fecha &fecha);
         virtual ~Contrato();
-        Contrato(const Contrato& o);
 
-        int getIdContrato() const;
-        long int getDniContrato() const;
-        Fecha getFechaContrato() const;
+        int getId() const;
+        long int getDni() const;
 
-        void setDniContrato(long int dni);
-        void setFechaContrato(Fecha f);
+        void setDni(long int dni);
 
         void ver();
 
-
 };
-
-ostream& operator<<(ostream &s, const Contrato &c);
 
 #endif // CONTRATO_H

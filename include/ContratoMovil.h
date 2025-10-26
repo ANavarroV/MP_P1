@@ -1,9 +1,8 @@
 #ifndef CONTRATOMOVIL_H
 #define CONTRATOMOVIL_H
 
-#include <iostream>
-#include <cstring>
 #include <Contrato.h>
+#include <Fecha.h>
 
 class ContratoMovil: public Contrato{
 
@@ -12,24 +11,9 @@ class ContratoMovil: public Contrato{
     int minHablados;
 
     public:
-        ContratoMovil(long int dni, const Fecha &f, float pM, int mH, const char nac[]);
+        ContratoMovil(long int dni, const Fecha &f, float pM, int mH);
         virtual ~ContratoMovil();
 
-        ContratoMovil(const ContratoMovil &otro);
-
-        char* getNacionalidad() const;
-        float getPrecioMinuto() const;
-        int getMinutosHablados() const;
-
-        void setNacionalidad(char nac[]);
-        void setPrecioMinuto(float pM);
-        void setMinutosHablados(int mH);
-        float factura();
-
-        void ver();
-
 };
-
-ostream& operator<<(ostream &out, ContratoMovil &cM);
 
 #endif // CONTRATOMOVIL_H
