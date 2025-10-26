@@ -45,3 +45,53 @@
 	"Contrato.h"
 	<iostream>
 
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\parte1.cpp
+	<iostream>
+	<Fecha.h>
+	<Cliente.h>
+
+1761480038 c:\users\antonio\desktop\mp_p1\practica  1 25-26\include\fecha.h
+	<iostream>
+
+1761480038 c:\users\antonio\desktop\mp_p1\practica  1 25-26\include\cliente.h
+	<iostream>
+	<cstring>
+	<Fecha.h>
+
+1761480585 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\parte2.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1761480038 c:\users\antonio\desktop\mp_p1\practica  1 25-26\include\contrato.h
+	<iostream>
+	<Fecha.h>
+
+1761480038 c:\users\antonio\desktop\mp_p1\practica  1 25-26\include\contratotp.h
+	<Contrato.h>
+
+1761480038 c:\users\antonio\desktop\mp_p1\practica  1 25-26\include\contratomovil.h
+	<Contrato.h>
+	<Fecha.h>
+
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\src\cliente.cpp
+	"Cliente.h"
+
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\src\contrato.cpp
+	"Contrato.h"
+	<iostream>
+
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\src\contratomovil.cpp
+	"ContratoMovil.h"
+
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\src\contratotp.cpp
+	"ContratoTP.h"
+
+1761480038 source:c:\users\antonio\desktop\mp_p1\practica  1 25-26\src\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
