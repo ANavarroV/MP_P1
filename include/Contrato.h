@@ -25,7 +25,8 @@ class Contrato{
         void setDniContrato(long int dni);
         void setFechaContrato(Fecha f);
 
-        void ver();
+        virtual void ver(); // Comportamiento polimórfico
+        virtual float factura() const = 0; // Método virtual puro (Clase abstracta)
 
 
 };

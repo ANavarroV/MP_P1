@@ -24,7 +24,7 @@ int ContratoTP::getMinutosHablados() const{
     return minHablados;
 }
 
-float ContratoTP::factura(){
+float ContratoTP::factura() const{
 
     float factura;
     int excesoMin;

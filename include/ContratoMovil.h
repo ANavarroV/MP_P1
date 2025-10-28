@@ -24,7 +24,7 @@ class ContratoMovil: public Contrato{
         void setNacionalidad(char nac[]);
         void setPrecioMinuto(float pM);
         void setMinutosHablados(int mH);
-        float factura();
+        float factura() const;
 
         void ver();
 

@@ -19,7 +19,7 @@ class ContratoTP: public Contrato{
         static float getPrecio();
         int getMinutosHablados() const;
 
-        float factura();
+        float factura() const;
         void setMinutosHablados(int mH);
         static void setTarifaPlana(int m, float p);
 

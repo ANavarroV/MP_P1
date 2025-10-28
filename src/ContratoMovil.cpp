@@ -51,7 +51,7 @@ void ContratoMovil::setMinutosHablados(int mH){
     minHablados = mH;
 }
 
-float ContratoMovil::factura(){
+float ContratoMovil::factura() const{
 
     float factura = precioMin * minHablados;
 

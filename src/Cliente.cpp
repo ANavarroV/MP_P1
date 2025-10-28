@@ -43,6 +43,10 @@ ostream& operator<<(ostream &out, const Cliente &c){
     return out;
 }
 
+void Cliente::ver() const{
+    cout << getNombre() << " (" << getDni() << " - " << getFecha() << ")";
+}
+
 Cliente& Cliente::operator=(const Cliente &otro) {
     if (this != &otro) {
         delete[] nombre;  // libero la memoria previa

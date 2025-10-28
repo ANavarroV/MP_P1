@@ -24,6 +24,7 @@ class Cliente{
 
         void setNombre(char nom[]);
         void setFecha(Fecha f);
+        void ver() const;
 
         bool operator==(const Cliente &otro) const;
         Cliente& operator=(const Cliente &otro);
