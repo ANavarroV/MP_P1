@@ -7,7 +7,7 @@
 #include "ContratoMovil.h" // definicion de la clase ContratoMovil
 
 using namespace std;
-
+/*
 int main(int argc, char *argv[]) {
 
     Fecha f1(29,2,2001), f2(f1), f3(29,2,2004);
@@ -40,4 +40,4 @@ int main(int argc, char *argv[]) {
     ct1.setMinutosHablados(cm3.getMinutosHablados()*2); cout << *p <<"\n"<< c << endl; cout << ct1 <<endl<< ct2 <<"\n"<< ct3 <<"\n"<< cm1 <<"\n"<< cm2 <<endl<< cm3 << endl;
     system("PAUSE");
     return 0;
-}
+}*/
