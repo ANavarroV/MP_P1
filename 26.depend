@@ -151,17 +151,17 @@
 	<iostream>
 	"Fecha.h"
 
-1761676063 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\empresa.cpp
+1761763013 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\empresa.cpp
 	"Empresa.h"
 
-1761674302 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\empresa.h
+1761755667 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\empresa.h
 	<Fecha.h>
 	<Contrato.h>
 	<Cliente.h>
 	<ContratoMovil.h>
 	<ContratoTP.h>
 
-1761676096 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
+1761761060 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
 	<cstdlib>
 	<iostream>
 	<iomanip>

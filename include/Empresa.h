@@ -21,6 +21,7 @@ class Empresa{
         //la posición del cliente en el array clientes
         int altaCliente(Cliente *c); //añade el cliente apuntado por c al array clientes
         //devuelve la posición donde lo mete (-1 si no cabe)
+        void capacidadContratos();
 
     public:
         Empresa();

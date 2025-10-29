@@ -41,10 +41,38 @@ int Empresa::altaCliente(Cliente *c) { //añade cliente apuntado por c al array c
     return pos;
 }
 
+bool Empresa::bajaCliente(long int dni){
+
+    bool result = false;
+    int pos = -1;
+
+    for(int i = 0; i < ncli; i++){
+        if(clientes[i]->getDni() == dni){
+            pos = i;
+        }
+    }
+
+    if(pos != -1){ // Si el cliente existe ...
+        /*for(int j = 0; j < ncon; j++){
+            if(contratos[j]->getDniContrato() == dni){
+                delete contratos[j];
+            }
+        }*/
+
+        delete clientes[pos];
+        result = true;
+        for(int k=pos+1; k<ncli; k++){
+            clientes[k-1]= clientes[k];
+        }
+        ncli--;
+    }
+
+    return result;
+}
+
 //método auxiliar usado por el método crearContrato
-int Empresa::buscarCliente(long int dni) const { //si no existe devuelve -1 y si existe
-//devuelve la posición del cliente
-//A IMPLEMENTAR POR EL ALUMNO... //con ese dni en el array clientes
+int Empresa::buscarCliente(long int dni) const { //si no existe devuelve -1 y si existe devuelve la posición del cliente
+
     int pos = -1;
     for(int i = 0; i < ncli; i++){
         if(clientes[i]->getDni() == dni){
@@ -68,38 +96,127 @@ int Empresa::nContratosTP() const{
     return cont;
 }
 
-void Empresa::crearContrato() { //EL ALUMNO DEBE TERMINAR DE IMPLEMENTAR ESTE METODO
+void Empresa::crearContrato() {
+
     long int dni;
     int pos;
-    cout << "Introduce DNI: ";
+    cout << "\nIntroduzca dni: ";
     cin >> dni;
-    //supongo que hay un metodo buscarCliente(dni) que devuelve -1 si no existe y si
-    //existe devuelve la posicion del cliente en el array this->cli
-    pos=this->buscarCliente(dni); //OJO ESTE METODO HAY QUE IMPLEMENTARLO
+
+    pos=this->buscarCliente(dni);
 
     if (pos==-1) { //el cliente no existe y hay que darlo de alta
+
         int dia, mes, anio;
         char nombre[100];
         Cliente *c; //NO CREO NINGUN CLIENTE SINO SOLO UN PUNTERO A CLIENTE
-        cout << "Introduce Nombre: ";
-        cin >> nombre;
-        cout << "Introduce Fecha (dd mm aaaa): ";
-        cin >> dia >> mes >> anio;
+
+        cout << "Nombre del cliente: ";
+        cin.ignore();
+        cin.getline(nombre, 100);
+        cout << "Fecha de alta\n";
+        cout << "dia: "; cin >> dia;
+        cout << "mes: "; cin >> mes;
+        cout << "anio: "; cin >> anio;
         c=new Cliente(dni, nombre, Fecha(dia, mes, anio));
         pos=this->altaCliente(c); //OJO HAY QUE IMPLEMENTARLO
     }
 
-    //viendo cuanto vale la variable pos sé si el cliente se ha dado de alta o no
     if (pos!=-1) { //el cliente existe o se ha dado de alta
         //PREGUNTAR QUE TIPO DE CONTRATO QUIERE Y LOS DATOS NECESARIOS
         //CREAR EL OBJETO CONTRATO CORRESPONDIENTE Y AÑADIR AL ARRAY
         //contratos UN PUNTERO A DICHO OBJETO
         int tipoContrato;
         cout << "Tipo de Contrato a abrir (1-Tarifa Plana, 2-Movil): ";
-        cin >> tipoContrato;
-        if(tipoContrato == 1){
 
+        do{
+
+            cin >> tipoContrato;
+            if(tipoContrato != 1 && tipoContrato != 2){
+                cout << "CONTRATO NO VALIDO! 1-Tarifa Plana o 2-Movil: ";
+            }
+
+
+        } while(tipoContrato != 1 && tipoContrato !=2);
+
+        int diaC, mesC, anioC, minC;
+        float precioM;
+        char nacionalidad[50];
+
+        cout << "Fecha del contrato\n";
+        cout << "dia: "; cin >> diaC;
+        cout << "mes: "; cin >> mesC;
+        cout << "anio: "; cin >> anioC;
+
+        cout << "minutos hablados: ";
+        cin >> minC;
+        Fecha fC(diaC, mesC, anioC);
+
+        switch(tipoContrato){
+
+            case 1:{
+                ContratoTP *cTP = new ContratoTP(dni, fC, minC);
+
+                capacidadContratos();
+
+                contratos[ncon++] = cTP;
+
+                break;
+            }
+            case 2:{
+                cout << "Precio minuto: ";
+                cin >> precioM;
+
+                cout << "Nacionalidad: ";
+                cin.ignore();
+                cin.getline(nacionalidad, 50);
+
+                ContratoMovil *cM = new ContratoMovil(dni, fC, precioM, minC, nacionalidad);
+
+                capacidadContratos();
+                contratos[ncon++] = cM;
+
+                break;
+            }
         }
+    }
+}
+
+bool Empresa::cancelarContrato(int idContrato){
+
+    bool result = false;
+    int pos = -1;
+
+    for(int i = 0; i < ncon; i++){
+        if(contratos[i]->getIdContrato() == idContrato){
+            pos = i;
+            result = true;
+        }
+    }
+
+    if(pos != -1){
+        delete contratos[pos];
+
+        for(int j=pos+1; j<ncon; j++){
+            contratos[j-1]= contratos[j];
+        }
+        ncon--;
+
+    }
+
+    return result;
+}
+
+void Empresa::capacidadContratos(){
+    if (ncon == nmaxcon) {
+        Contrato **aux = contratos;
+        contratos = new Contrato*[nmaxcon * 2];
+
+        for (int i = 0; i < ncon; ++i)
+            contratos[i] = aux[i];
+
+        delete [] aux;
+        nmaxcon *= 2;
     }
 }
 
