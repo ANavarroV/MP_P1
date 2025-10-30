@@ -56,12 +56,13 @@ bool Empresa::bajaCliente(long int dni){
 
         for(int j = 0; j < ncon; j++){ // Recorremos contactos
             if(contratos[j]->getDniContrato() == dni){ // Si contrato tiene mismo dni ...
-                delete contratos[j];
+                /*delete contratos[j];
 
                 for(int k=j+1; k<ncon; k++){ // Movemos los contratos una pos -1 <--
                     contratos[k-1]= contratos[k];
                 }
-                ncon--;
+                ncon--;*/
+                cancelarContrato(j);
                 j--; // Puede haber 2 contratos seguidos con el mismo dni, hay que evaluarlo
             }
         }
@@ -248,17 +249,19 @@ int Empresa::descuento(float porcentaje) const{ // Rebajar la tarifa de todos lo
 
     float factor = 1.0 - (porcentaje/100);
     float precioM;
+    int cont = 0;
 
     for(int i = 0; i < ncon; i++){
         if(ContratoMovil *cm = dynamic_cast<ContratoMovil*>(contratos[i])){
 
             precioM = cm->getPrecioMinuto();
             cm->setPrecioMinuto(precioM * factor);
+            cont++;
         }
     }
 
 
-    return static_cast<int>(porcentaje);
+    return cont;
 }
 
 void Empresa::ver() const{

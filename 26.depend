@@ -161,7 +161,7 @@
 	<ContratoMovil.h>
 	<ContratoTP.h>
 
-1761823037 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
+1761823071 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
 	<cstdlib>
 	<iostream>
 	<iomanip>
@@ -171,5 +171,4 @@
 	"ContratoTP.h"
 	"ContratoMovil.h"
 	"Empresa.h"
-	<windows.h>
 
