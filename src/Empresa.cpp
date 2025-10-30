@@ -46,21 +46,29 @@ bool Empresa::bajaCliente(long int dni){
     bool result = false;
     int pos = -1;
 
-    for(int i = 0; i < ncli; i++){
+    for(int i = 0; i < ncli && pos == -1; i++){ // Busqueda del cliente
         if(clientes[i]->getDni() == dni){
             pos = i;
         }
     }
 
     if(pos != -1){ // Si el cliente existe ...
-        /*for(int j = 0; j < ncon; j++){
-            if(contratos[j]->getDniContrato() == dni){
+
+        for(int j = 0; j < ncon; j++){ // Recorremos contactos
+            if(contratos[j]->getDniContrato() == dni){ // Si contrato tiene mismo dni ...
                 delete contratos[j];
+
+                for(int k=j+1; k<ncon; k++){ // Movemos los contratos una pos -1 <--
+                    contratos[k-1]= contratos[k];
+                }
+                ncon--;
+                j--; // Puede haber 2 contratos seguidos con el mismo dni, hay que evaluarlo
             }
-        }*/
+        }
 
         delete clientes[pos];
         result = true;
+
         for(int k=pos+1; k<ncli; k++){
             clientes[k-1]= clientes[k];
         }
@@ -236,9 +244,26 @@ void Empresa::cargarDatos() {
     this->ncon=7;
 }
 
+int Empresa::descuento(float porcentaje) const{ // Rebajar la tarifa de todos los contratos MOVIL
+
+    float factor = 1.0 - (porcentaje/100);
+    float precioM;
+
+    for(int i = 0; i < ncon; i++){
+        if(ContratoMovil *cm = dynamic_cast<ContratoMovil*>(contratos[i])){
+
+            precioM = cm->getPrecioMinuto();
+            cm->setPrecioMinuto(precioM * factor);
+        }
+    }
+
+
+    return static_cast<int>(porcentaje);
+}
+
 void Empresa::ver() const{
 
-    cout << "La Empresa tiene " << ncli << " clientes y " << ncon << " contratos" << endl;
+    cout << "\nLa Empresa tiene " << ncli << " clientes y " << ncon << " contratos" << endl;
     cout << "Clientes:" << endl;
     for(int i = 0; i < ncli; i++){
         clientes[i]->ver();

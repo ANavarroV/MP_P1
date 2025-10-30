@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]) {
 
     bool ok;
     Empresa Yoigo;
@@ -21,8 +21,8 @@ int main(int argc, char *argv[]){
     Yoigo.ver();
     cout <<"Yoigo tiene " << Yoigo.nContratosTP() << " Contratos de Tarifa Plana\n\n";
 
-    //Yoigo.crearContrato(); //ContratoMovil a 37000017 el 01/01/2017 con 100m a 0.25
-    //Yoigo.crearContrato(); //ContratoTP a 22330014 (pepe luis) el 2/2/2017 con 305m
+    Yoigo.crearContrato(); //ContratoMovil a 37000017 el 01/01/2017 con 100m a 0.25
+    Yoigo.crearContrato(); //ContratoTP a 22330014 (pepe luis) el 2/2/2017 con 305m
     ok=Yoigo.cancelarContrato(28); //este Contrato no existe
 
     if (ok) cout << "Contrato 28 cancelado\n"; else cout << "El Contrato 28 no existe\n";
