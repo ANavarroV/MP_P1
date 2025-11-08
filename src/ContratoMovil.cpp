@@ -66,7 +66,7 @@ void ContratoMovil::ver(){
 
 }
 
-ostream& operator<<(ostream &out, ContratoMovil &cM){
+ostream& operator<<(ostream &out, const ContratoMovil &cM){
 
     out << cM.getDniContrato() << " (" << cM.getIdContrato() << " - " << cM.getFechaContrato() << ") ";
     out << cM.getMinutosHablados() << "m, " << cM.getNacionalidad() << " " << cM.getPrecioMinuto() << " - ";

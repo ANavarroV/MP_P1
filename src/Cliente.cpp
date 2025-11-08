@@ -29,6 +29,7 @@ Fecha Cliente::getFecha() const{
 }
 
 void Cliente::setNombre(char nom[]){
+    delete [] nombre;
     nombre = new char[strlen(nom)+1];
     strcpy(nombre, nom);
 }

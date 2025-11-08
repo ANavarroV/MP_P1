@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 
     cout << setprecision(2) << fixed; //a partir de aqui float se muestra con 2 decimales
     cout << endl << "APLICACION DE GESTION TELEFONICA\n" << endl;
+
     Yoigo.cargarDatos(); //crea 3 clientes y 7 contratos. metodo creado para no tener que meter datos cada vez que pruebo el programa
     Yoigo.ver();
     cout <<"Yoigo tiene " << Yoigo.nContratosTP() << " Contratos de Tarifa Plana\n\n";

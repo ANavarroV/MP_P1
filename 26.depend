@@ -106,12 +106,12 @@
 1760631876 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\fecha.h
 	<iostream>
 
-1761675865 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\cliente.h
+1762622986 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\cliente.h
 	<iostream>
 	<cstring>
 	<Fecha.h>
 
-1761670480 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte2.cpp
+1762430127 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte2.cpp
 	<cstdlib>
 	<iostream>
 	<iomanip>
@@ -120,7 +120,7 @@
 	"ContratoTP.h"
 	"ContratoMovil.h"
 
-1761672144 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\contrato.h
+1762430119 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\contrato.h
 	<iostream>
 	<Fecha.h>
 
@@ -129,7 +129,7 @@
 	<cstring>
 	<Contrato.h>
 
-1761673805 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\contratomovil.h
+1762621448 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\contratomovil.h
 	<iostream>
 	<cstring>
 	<Contrato.h>
@@ -141,7 +141,7 @@
 	"Contrato.h"
 	<iostream>
 
-1761673817 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\contratomovil.cpp
+1762621455 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\contratomovil.cpp
 	"ContratoMovil.h"
 
 1761673824 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\contratotp.cpp
@@ -151,7 +151,7 @@
 	<iostream>
 	"Fecha.h"
 
-1761822130 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\empresa.cpp
+1761838127 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\src\empresa.cpp
 	"Empresa.h"
 
 1761819648 c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\include\empresa.h
@@ -161,7 +161,7 @@
 	<ContratoMovil.h>
 	<ContratoTP.h>
 
-1761823071 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
+1762619546 source:c:\users\anton\desktop\mp p1\practica_1 25-26\practica 1 25-26\parte3.cpp
 	<cstdlib>
 	<iostream>
 	<iomanip>

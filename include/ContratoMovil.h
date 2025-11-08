@@ -30,6 +30,6 @@ class ContratoMovil: public Contrato{
 
 };
 
-ostream& operator<<(ostream &out, ContratoMovil &cM);
+ostream& operator<<(ostream &out, const ContratoMovil &cM);
 
 #endif // CONTRATOMOVIL_H

@@ -29,10 +29,10 @@ Empresa::~Empresa() {
 int Empresa::altaCliente(Cliente *c) { //añade cliente apuntado por c al array clientes
     int pos=-1; //devuelve -1 si no cabe y la posición donde
 
-    if (this->ncli<nmaxcli) { //donde lo he metido si cabe
-        this->clientes[this->ncli]=c;
-        pos=this->ncli;
-        this->ncli++;
+    if (ncli < nmaxcli) { //donde lo he metido si cabe
+        clientes[ncli]=c;
+        pos = ncli;
+        ncli++;
     } else {
         cout << "Lo siento, el cupo de clientes esta lleno";
         pos=-1;
@@ -112,7 +112,7 @@ void Empresa::crearContrato() {
     cout << "\nIntroduzca dni: ";
     cin >> dni;
 
-    pos=this->buscarCliente(dni);
+    pos = buscarCliente(dni);
 
     if (pos==-1) { //el cliente no existe y hay que darlo de alta
 
@@ -123,12 +123,14 @@ void Empresa::crearContrato() {
         cout << "Nombre del cliente: ";
         cin.ignore();
         cin.getline(nombre, 100);
+
         cout << "Fecha de alta\n";
         cout << "dia: "; cin >> dia;
         cout << "mes: "; cin >> mes;
         cout << "anio: "; cin >> anio;
-        c=new Cliente(dni, nombre, Fecha(dia, mes, anio));
-        pos=this->altaCliente(c); //OJO HAY QUE IMPLEMENTARLO
+
+        c = new Cliente(dni, nombre, Fecha(dia, mes, anio));
+        pos = altaCliente(c); //OJO HAY QUE IMPLEMENTARLO
     }
 
     if (pos!=-1) { //el cliente existe o se ha dado de alta
